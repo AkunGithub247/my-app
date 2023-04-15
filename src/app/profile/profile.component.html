@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="profile">
+        <div class="profile-header">
+            <h1>{{ profile.name }}</h1>
+            <p>{{ profile.email }}</p>
+        </div>
+        <div class="profile-details">
+            <h2>Profile Details</h2>
+            <ul>
+                <li><strong>Name:</strong> {{ profile.name }}</li>
+                <li><strong>Age:</strong> {{ profile.age }}</li>
+                <li><strong>Email:</strong> {{ profile.email }}</li>
+                <li>
+                    <strong>Address:</strong>
+                    {{ profile.address.street }}, {{ profile.address.city }}, {{ profile.address.state }} {{
+                    profile.address.zip }}
+                </li>
+                <li><strong>Bio:</strong> {{ profile.bio }}</li>
+            </ul>
+        </div>
+    </div>
+
+</body>
+
+</html>

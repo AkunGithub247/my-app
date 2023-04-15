@@ -1,0 +1,90 @@
+.post-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.post-list>div {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    position: relative;
+}
+
+.post-list>div h2 {
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.post-list>div p {
+    color: #666;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.post-list>div button {
+    background-color: #007bff;
+    border: none;
+    border-radius: 4px;
+    color: #fff;
+    font-size: 14px;
+    padding: 8px 16px;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    cursor: pointer;
+}
+
+.post-list>div button:hover {
+    background-color: #0062cc;
+}
+
+.post-edit {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.post-edit h2 {
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.post-edit form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.post-edit form label {
+    color: #666;
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.post-edit form input[type="text"],
+.post-edit form textarea {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 8px;
+    font-size: 16px;
+}
+
+.post-edit form button[type="submit"] {
+    background-color: #007bff;
+    border: none;
+    border-radius: 4px;
+    color: #fff;
+    font-size: 16px;
+    padding: 8px 16px;
+    cursor: pointer;
+}
+
+.post-edit form button[type="submit"]:hover {
+    background-color: #0062cc;
+}

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- post.component.html -->
+
+    <div class="post-list">
+        <div *ngFor="let post of posts">
+            <h2>{{ post.title }}</h2>
+            <p>{{ post.content }}</p>
+            <button *ngIf="!selectedPost || post.id !== selectedPost.id" (click)="onSelect(post)">Edit</button>
+        </div>
+    </div>
+
+    <div class="post-edit" *ngIf="selectedPost">
+        <h2>Edit Post</h2>
+        <form (ngSubmit)="onSubmit()">
+            <label for="title">Title:</label>
+            <input type="text" [(ngModel)]="selectedPost.title" name="title">
+
+            <label for="content">Content:</label>
+            <textarea [(ngModel)]="selectedPost.content" name="content"></textarea>
+
+            <button type="submit">Save</button>
+        </form>
+    </div>
+
+
+</body>
+
+</html>
